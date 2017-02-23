@@ -1,0 +1,25 @@
+body{
+  font-family: Courier;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+a{
+  color: #0D5183;
+}
+input[type='submit']{
+  border: 0px;
+  box-shadow: 2px 2px 2px grey;
+  color: white;
+  font-size: 1em;
+  background-color: black;
+}
+#navbar{
+  text-align: right;
+  margin-bottom: 2.5%;
+  display: block;
+}
+#content{
+  text-align: center;
+  margin: 10%;
+}

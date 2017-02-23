@@ -1,0 +1,55 @@
+body {
+  font-family: Courier;
+  background-image: url("background.png");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+img {
+  width: 20px;
+  height: 20px;
+}
+a {
+  color: #0D5183;
+}
+h2 {
+  margin-left: 2%;
+}
+#navbar {
+  text-align: right;
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+  display: block;
+}
+#add_review{
+  float: right;
+  margin-right: 5%;
+  padding: 2%;
+  border: 4px black solid;
+}
+.reviews {
+  margin-left: 4%;
+  margin-bottom: 4%;
+  border-bottom: 2px solid black;
+  width: 50%;
+  height: auto;
+  display: inline-block;
+}
+input[type='submit']{
+  float: right;
+  border: 0px;
+  box-shadow: 2px 2px 2px grey;
+  color: white;
+  font-size: 1em;
+  background-color: black;
+}
+button {
+  background-color: inherit;
+  color: #FFC300;
+  font-family: Courier;
+  font-size: 0.8em;
+  font-weight: bold;
+  border: 0px;
+}
+form {
+  display: inline-block;
+}

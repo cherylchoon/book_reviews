@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Books | Home</title>
+    <link rel='stylesheet' href='{% static "reviews/index_styles.css" %}'>
+  </head>
+  <body>
+    <div id='navbar'>
+      <a href='{% url 'reviews:add_review' %}'>Add Book and Review</a>
+      <a href='{% url 'users:user_logout' %}'>Logout</a>
+    </div>
+    <div id='content'>
+      <h3>Hello, {{request.session.username}}!</h3>
+      <h3>Recent Book Reviews: </h3>
+      <div id='others'>
+        <h3>Other Books with Reviews: </h3>
+        {% for book in book_reviews %}
+          <p><a href='/books/{{book.book.id}}'>{{book.book.title}}</p></a>
+        {% endfor %}
+      </div>
+      {% for review in recent_reviews %}
+      <div class='reviews'>
+        <a href='/books/{{review.book.id}}'><h4>{{review.book.title}}</h4></a>
+        <p>
+          Rating:
+          {% with ''|center:review.rating as range %}
+          {% for _ in range %}
+            <img src='{% static "reviews/star.png" %}' alt='Ratings star'>
+          {% endfor %}
+          {% endwith %}
+        </p>
+        <p><a href='/users/{{review.user.id}}'>{{review.user.first_name}}</a> says: {{review.review}}</p>
+        <p>Posted on: {{review.created_at|date:"F d, Y"}}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+  </body>
+</html>
